@@ -11,7 +11,7 @@
             // Return value for new_array
             }[, thisArg])
 
-example
+**example**
 
 In the following example, each number in an array is doubled.
 
