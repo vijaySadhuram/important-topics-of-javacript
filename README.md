@@ -98,10 +98,15 @@ Let's dive into the example:
 
 
 1.The script begins with a global context.
+
 2.The call to average(10, 20) adds its context to the stack.
+
 3.Inside average(), add() gets its context.
+
 4. After add() shines, its context exits.
+
 5. average() concludes its scene, and its context departs.
+
 🚀 The Call Stack empties, and the script's curtains close.
 
 
