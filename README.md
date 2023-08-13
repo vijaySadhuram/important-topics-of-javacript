@@ -67,8 +67,9 @@ callback function.
                     }, 0);
                     console.log(sum); // 10
 
-
+----------
 🔍 **Exploring the JavaScript Call Stack: Understanding Execution and Order** 🔍
+
 
 Ever wondered how JavaScript pieces together your code? 🤔 Let's delve into the Call Stack and its role in managing functions and their flow! 🎩🎉
 
@@ -108,6 +109,47 @@ Let's dive into the example:
 5. average() concludes its scene, and its context departs.
 
 🚀 The Call Stack empties, and the script's curtains close.
+
+--------- 
+
+🚀Power of Higher-Order Functions in JavaScript! 🚀
+
+🔹 What's a Higher-Order Function? It's like a versatile tool in your coding toolbox! A function that takes or returns other functions. It's all about flexibility and reusability!
+
+🔹 Callback Functions in Action: Imagine having a callback function that dances to your tune! 💃🎶 Pass it to a higher-order function, and watch the magic unfold!
+
+       function callbackFunction() {
+           console.log('I am a callback function');
+       }
+
+       function higherOrderFunction(func) {
+         console.log('I am a higher-order function');
+          func();
+         }
+
+        higherOrderFunction(callbackFunction);
+
+In the above code higherOrderFunction() is a HOF because we are passing a callback function as a parameter to it.
+
+JavaScript's Array methods like map, filter, and reduce are true magicians! ✨ They transform arrays effortlessly, making your code elegant and efficient.
+
+Example:
+      const numbers = [1, 2, 3, 4, 5];
+      const squared = numbers.map(function(num) {
+      return num * num;
+      });
+
+      const evens = numbers.filter(function(num) {
+       return num % 2 === 0;
+       });
+
+     const sum = numbers.reduce(function(acc, num) {
+     return acc + num;
+     }, 0);
+
+      console.log(squared); // Output: [1, 4, 9, 16, 25]
+      console.log(evens);  // Output: [2, 4]
+      console.log(sum);   // Output: 15
 
 
 
