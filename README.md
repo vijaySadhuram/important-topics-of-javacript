@@ -153,7 +153,7 @@ Example:
 
 
 
-      Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase, even before the code is executed. This means that you can use variables and functions before they are declared in your code. However, only the declarations are hoisted, not the initializations or assignments.
+Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase, even before the code is executed. This means that you can use variables and functions before they are declared in your code. However, only the declarations are hoisted, not the initializations or assignments.
 
 Here's an example to illustrate hoisting:
 
