@@ -153,6 +153,46 @@ Example:
 
 
 
+      Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase, even before the code is executed. This means that you can use variables and functions before they are declared in your code. However, only the declarations are hoisted, not the initializations or assignments.
+
+Here's an example to illustrate hoisting:
+
+```javascript
+console.log(myVar); // Outputs: undefined
+var myVar = 42;
+
+foo(); // Outputs: "Hello, World!"
+function foo() {
+    console.log("Hello, World!");
+}
+```
+
+In this example:
+1. The variable `myVar` is hoisted to the top of its scope, but its value is not assigned yet, so it's `undefined` when accessed before the actual assignment.
+2. The function `foo()` is also hoisted, so it can be called before its actual declaration.
+
+However, it's important to note that only declarations are hoisted, not initializations or assignments. Let's see another example:
+
+```javascript
+console.log(myVar); // Outputs: undefined
+var myVar = 42;
+
+bar(); // Throws an error: bar is not a function
+var bar = function() {
+    console.log("Hello from bar!");
+};
+```
+
+In this example:
+1. The variable `myVar` is hoisted, but again, its value is not assigned yet.
+2. The variable `bar` is hoisted as well, but it is initialized with an anonymous function expression. Since only the declaration is hoisted, the assignment of the function to `bar` is not hoisted, resulting in the error.
+
+To avoid unexpected behavior due to hoisting, it's recommended to declare variables at the beginning of their scope and to define functions before using them.
+
+In summary, hoisting is a JavaScript mechanism where variable and function declarations are moved to the top of their scope during compilation, allowing you to use them before their actual declarations in the code. However, only the declarations are hoisted, not the assignments or initializations.
+
+
+
 
 
 
